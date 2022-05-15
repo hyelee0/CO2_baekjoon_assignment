@@ -55,44 +55,34 @@ def _10989():
 #==================================================================================================================
 
 
-# 시간 초과..................
 """  정렬 4: 2108번 - 통계학  """
 def _2108():
     N = int(input())
     
-    # ex. N is 5 -> 1, 3, 8, -2, 2 -> {1: 1, 3: 1, 8: 1, -2: 1, 2: 1}
-    num_dict = {} 
-    for _ in range(N):
-        num = int(input()) 
-        if num in num_dict:
-            num_dict[num] += 1
-        elif num not in num_dict:
-            num_dict[num] = 1
-    num_dict = dict(sorted(num_dict.items()))
-    # 키값을 기준으로 오름차순 정렬 완료하면 {-2: 1, 1: 1, 2: 1, 3: 1, 8: 1}
-
-    tmp = [i for i, j in num_dict.items() for _ in range(j)] 
-
-    res1 = sum(tmp) / N # 산술평균
-    res1 = round(res1)
+    num_list = [int(input()) for _ in range(N)]
+    num_list.sort()
+    
+    res1 = round(sum(num_list) / N)
+    res2 = num_list[N // 2]
+    res3 = 0
+    res4 = max(num_list) - min(num_list)
+    
+    import collections
+    
+    tmp_list = collections.Counter(num_list).most_common()
+    
+    if len(tmp_list) == 1:
+        res3 = tmp_list[0][0]
+    elif tmp_list[0][1] == tmp_list[1][1]:
+        res3 = tmp_list[1][0]
+    else:
+        res3 = tmp_list[0][0]
+    
     print(res1)
-    
-    res2 = tmp[N // 2] # 중앙값
-    print(res2) 
-    
-    res3 = max(num_dict.values()) # 최빈값
-    if res3 == 1:
-        
-    for key in num_dict:
-        if num_dict[key] == res3:
-            print(key)
-            break
-
-    res4 = max(tmp) - min(tmp) # 범위
+    print(res2)
+    print(res3)
     print(res4)
     
-_2108()
-
 
 #==================================================================================================================
 
