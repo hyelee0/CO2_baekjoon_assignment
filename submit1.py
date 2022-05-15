@@ -59,21 +59,22 @@ def _10989():
 def _2108():
     N = int(input())
     
-    num_list = [int(input()) for _ in range(N)]
-    num_list.sort()
+    num_list = [int(input()) for _ in range(N)] # 입력받은 값들을 차례로 리스트에 저장
+    num_list.sort() # 오름차순 정렬
     
-    res1 = round(sum(num_list) / N)
-    res2 = num_list[N // 2]
-    res3 = 0
-    res4 = max(num_list) - min(num_list)
+    res1 = round(sum(num_list) / N) # 산술평균
+    res2 = num_list[N // 2] # 중앙값
+    res3 = 0 # 최빈값
+    res4 = max(num_list) - min(num_list) # 범위
     
     import collections
     
     tmp_list = collections.Counter(num_list).most_common()
+    # [(값: 몇 번), (값: 몇 번), .... 이거를 빈도수가 가장 높은 값부터 정렬해서 반환]
     
     if len(tmp_list) == 1:
         res3 = tmp_list[0][0]
-    elif tmp_list[0][1] == tmp_list[1][1]:
+    elif tmp_list[0][1] == tmp_list[1][1]: # 최빈값이 여러 개면 두번째로 작은 값을 출력하도록 제시됨
         res3 = tmp_list[1][0]
     else:
         res3 = tmp_list[0][0]
