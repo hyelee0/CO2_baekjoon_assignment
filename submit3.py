@@ -189,11 +189,11 @@ def _11729():
             print(start, end) # 이동 양상도 출력해야 함
             return
         
-        mid = 6 - start - end
+        mid = 6 - start - end # ?????
         
         move(N-1, start, mid) # N-1개의 원반을 첫번째에서 두번째로 옮김
         print(start, end) # 이동 양상도 출력해야 함
-        move(N-1, mid, end) # 이게 맞나........?
+        move(N-1, mid, end) # .....?
     
     print(2**N - 1) # 둘째줄: 세번째 장대로 모두 옮기는 최소 이동횟수 (2^N - 1로 알려져 있음)
     move(N, 1, 3)
