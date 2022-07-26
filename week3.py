@@ -45,6 +45,7 @@ def _9184():
             return 1
         elif a > 20 or b > 20 or c > 20:
             return w(20, 20, 20)
+        
         pass
         pass
         pass
@@ -332,6 +333,7 @@ def _11054():
                 length_record1[i] = max(length_record1[i], length_record1[j]+1)
             if reverse_num_list[i] > reverse_num_list[j]:
                 length_record2[i] = max(length_record2[i], length_record2[j]+1)
+                
     pass
     pass
     pass
@@ -417,6 +419,7 @@ def _12865():
         value_list.append(V)
     
     for i in range(1, N+1):
+        
             pass
             pass
             pass
