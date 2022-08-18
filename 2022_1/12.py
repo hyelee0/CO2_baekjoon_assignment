@@ -1,5 +1,3 @@
-# 정렬의 경우 지난 동아리 과제로 이미 완료했던 부분이라 submit1.py에 작성되어 있습니다. (2주차에 한꺼번에 올리는 걸로 이해하고 있던 바람에 늦게 업로드하게 되었네요 죄송합니다...!)
-
 import sys
 input = sys.stdin.readline
 
@@ -163,4 +161,3 @@ def _11478():
             res.add(part)
     
     print(len(res))
-
