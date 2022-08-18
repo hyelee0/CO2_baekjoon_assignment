@@ -1,4 +1,3 @@
-# 하계방학 중 동아리 활동 2주차 과제 제출입니다.
 import sys, math
 input = sys.stdin.readline
 
@@ -310,4 +309,3 @@ def _2004():
             continue
         print(cnt)
         break
-
