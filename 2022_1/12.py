@@ -161,3 +161,13 @@ def _11478():
             res.add(part)
     
     print(len(res))
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
