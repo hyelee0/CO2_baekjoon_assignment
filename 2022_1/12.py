@@ -1,3 +1,5 @@
+
+
 import sys
 input = sys.stdin.readline
 
@@ -162,12 +164,4 @@ def _11478():
     
     print(len(res))
 
-    
-    
-    
-    
-    
-    
-    
-    
     
